@@ -1,0 +1,7 @@
+{
+  "username": "USERNAME",
+	"password": "PASSWORD",
+	"user-agent": "",
+	"monitor-subreddit": "",
+	"database": "processed.db"
+}
