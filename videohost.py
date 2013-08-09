@@ -27,8 +27,7 @@ class VideoHost(object):
 
     def __init__(self, video_url):
         self.video_url = video_url
-        self._re_patterns = {'youtube' : 'v=([A-Za-z0-9_-]+)',
-        }
+        self._re_patterns = {'youtube' : 'v=([A-Za-z0-9_-]+)'}
 
         # would like to support twitch.tv and nsfw video hosts
         self._supported_domains = ['youtube', 'youtu.be', 'vimeo', 'liveleak']
