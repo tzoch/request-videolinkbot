@@ -154,10 +154,10 @@ class ProcessRequest(object):
 |Source Comment|Score|Video Link|
 |:-------|:-------:|:-------|\n'''.format(self.target_url) # fix this
 
-        tail ="""\n* [RequestVideoLinkBot FAQ](http://www.reddit.com/r/RequestVideoLinkBot/wiki/faq)
-* [Feedback](http://www.reddit.com/r/RequestVideoLinkBot/submit) 
-* [Original VideoLinkBot](http://www.reddit.com/u/VideoLinkBot) 
-* [Source Code](http://github.com/)""" 
+        tail ="""\n[^[RequestVideoLinkBot&nbsp;FAQ]](http://www.reddit.com/r/RequestVideoLinkBot/wiki/faq) 
+        [^[Feedback]](http://www.reddit.com/r/RequestVideoLinkBot/submit) 
+        [^[Original&nbsp;VideoLinkBot]](http://www.reddit.com/u/VideoLinkBot) 
+        [^[Source]](http://github.com/)""" 
         
         text = u''
         if not self.cache.linksCache:
