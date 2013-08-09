@@ -40,12 +40,6 @@ class RequestVLB(object):
         self.sleep_interval = 300 # 5 minutes
         self.db = Database(db_name)
 
-    # @property
-    # def processedSubmissions(self):
-    #     if self.db.getProcessed:
-    #         return self.db.getProcessed()[0]
-    #     return None
-
     def processRequests(self, upd_interval=0):
         '''
         Reads the request subreddit and returns a list of submission_ids
@@ -73,7 +67,6 @@ class RequestVLB(object):
                     # target_id refers to the submission id of the _target_ of the request
                     self.submissions_to_crawl.append({'request_id': request.id, 'target_url': request.url, 'target_id': target_id})
 
-                # print vars(c)
             self.last_update = time.time()
         else:
             # If there are requests to fulfil already, do those
@@ -144,7 +137,6 @@ class ProcessRequest(object):
                                 video = VideoHost(video_link)
                                 if video.supported:
                                     self.cache.cacheLinks((comment.author.name, comment_permalink, comment.ups - comment.downs, video.shortLink, video.title))
-                # print vars(comment)
 
         return self.cache.returnLinksCache()
 
@@ -152,7 +144,7 @@ class ProcessRequest(object):
         head = '''Here is a list of video links collected from comments that redditors have made in [this requested submission]({0}):
 
 |Source Comment|Score|Video Link|
-|:-------|:-------:|:-------|\n'''.format(self.target_url) # fix this
+|:-------|:-------:|:-------|\n'''.format(self.target_url)
 
         tail ="""\n[^[RequestVideoLinkBot&nbsp;FAQ]](http://www.reddit.com/r/RequestVideoLinkBot/wiki/faq) 
         [^[Feedback]](http://www.reddit.com/r/RequestVideoLinkBot/submit) 
@@ -183,7 +175,7 @@ class ProcessRequest(object):
             except:
                 print 'Comment not posted!'
         else:
-            print 'Comment is too long!\n [{0}] characters\nTrimming videos below threshold'.format(len(self.comment()))
+            print 'Comment is too long!\n[{0}] characters\nTrimming videos below threshold'.format(len(self.comment()))
             try:
                 self.request_submission.add_comment(self.comment(5)) # don't post videos with a score of less than 5
                 print 'Comment successfully posted!'
