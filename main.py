@@ -157,7 +157,7 @@ class ProcessRequest(object):
         tail ="""\n[^[RequestVideoLinkBot&nbsp;FAQ]](http://www.reddit.com/r/RequestVideoLinkBot/wiki/faq) 
         [^[Feedback]](http://www.reddit.com/r/RequestVideoLinkBot/submit) 
         [^[Original&nbsp;VideoLinkBot]](http://www.reddit.com/u/VideoLinkBot) 
-        [^[Source]](http://github.com/)""" 
+        [^[Source]](https://github.com/tzoch/request-videolinkbot)""" 
         
         text = u''
         if not self.cache.linksCache:
