@@ -17,6 +17,6 @@ As of right now, the bot does not post in the original submissions. Users reques
 the bot are free to post the video list wherever they would like.
 
 Currently, the bot only supports youtube, vimeo, and liveleak videos, but the
-plan is to add support for more hosts, and to possible support NSFW hosts.
+plan is to add support for more hosts, and to possibly support NSFW hosts.
 
 This version is by /u/OnceAndForever
